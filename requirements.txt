@@ -1,0 +1,6 @@
+torchtext~=0.15.1
+torchdata
+pandas~=1.5.3
+torch~=2.0.0
+spacy~=3.5.1
+gensim
