@@ -116,8 +116,8 @@ class LSTMDetector(nn.Module):
         lstm_out, _ = self.lstm(x, (h0, c0))
         lstm_out = lstm_out.reshape(lstm_out.shape[0], -1)
 
-        # attention_out = self.attention(lstm_out)
-        fc_out = self.fc(lstm_out)
+        attention_out = self.attention(lstm_out)
+        fc_out = self.fc(attention_out)
         return fc_out
 
 
